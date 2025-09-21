@@ -1,0 +1,84 @@
+// Import custom files
+@import "variables";
+@import "mixins";
+@import "components";
+@import "utilities";
+
+// Custom styles
+body {
+    font-family: $font-family-base;
+    background-color: lighten($light-color, 2%);
+    line-height: $line-height-base;
+}
+
+.header {
+    margin-bottom: map-get($spacers, 5);
+}
+
+.todo-app-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+// Custom button styles
+.btn {
+    @include transition;
+    
+    &-primary {
+        @include button-variant($primary-color, white);
+    }
+    
+    &-outline-primary {
+        @include transition;
+        
+        &:hover {
+            @include button-variant($primary-color, white);
+        }
+    }
+}
+
+// Form control focus style
+.form-control {
+    @include transition;
+    
+    &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+    }
+}
+
+// Custom enhancements for the todo app
+#todoList {
+    .list-group-item {
+        border-left: none;
+        border-right: none;
+        
+        &:first-child {
+            border-top: none;
+        }
+    }
+}
+
+#clearCompleted {
+    @include transition;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+// Animation for new todos
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.new-todo {
+    animation: slideIn 0.3s ease-out;
+}

@@ -1,0 +1,224 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+  transition: all 0.3s ease-in-out;
+}
+.todo-item:last-child {
+  border-bottom: none;
+}
+.todo-item:hover {
+  background-color: #f8f9fa;
+}
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-text {
+  flex: 1;
+  margin: 0 1rem;
+  cursor: pointer;
+  word-break: break-word;
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.todo-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-actions .btn {
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+}
+.todo-actions .btn.btn-edit {
+  background-color: #ffc107;
+  color: #212529;
+  border: 1px solid rgb(236.5, 177.375, 0);
+}
+.todo-actions .btn.btn-edit:hover {
+  background-color: rgb(211, 158.25, 0);
+  border-color: rgb(185.5, 139.125, 0);
+}
+.todo-actions .btn.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  border: 1px solid rgb(210.9493670886, 36.5506329114, 53.2594936709);
+}
+.todo-actions .btn.btn-delete:hover {
+  background-color: rgb(189.2151898734, 32.7848101266, 47.7721518987);
+  border-color: rgb(167.4810126582, 29.0189873418, 42.2848101266);
+}
+
+.edit-todo-form {
+  display: none;
+  flex: 1;
+  margin: 0 1rem;
+}
+.edit-todo-form .form-control {
+  margin-right: 0.5rem;
+}
+
+.filter-buttons .btn {
+  transition: all 0.3s ease-in-out;
+}
+.filter-buttons .btn.active {
+  background-color: #0d6efd;
+  color: white;
+  border: 1px solid rgb(1.9713114754, 97.5799180328, 238.5286885246);
+}
+.filter-buttons .btn.active:hover {
+  background-color: rgb(1.762295082, 87.2336065574, 213.237704918);
+  border-color: rgb(1.5532786885, 76.887295082, 187.9467213115);
+}
+
+.todo-card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.todo-card .card-header {
+  background-color: rgb(240.618852459, 246.3831967213, 254.881147541);
+  border-bottom: 1px solid rgb(190.0368852459, 216.0758196721, 254.4631147541);
+}
+
+@media (max-width: 576px) {
+  .todo-item {
+    padding: 0.5rem 1rem;
+  }
+  .todo-actions {
+    flex-direction: column;
+  }
+  .todo-actions .btn {
+    margin: 0.25rem 0;
+  }
+}
+.text-strikethrough {
+  text-decoration: line-through;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.mb-6 {
+  margin-bottom: 4rem;
+}
+
+.px-6 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(253.95, 254.1, 254.25);
+  line-height: 1.5;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.todo-app-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.btn {
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  border: 1px solid rgb(1.9713114754, 97.5799180328, 238.5286885246);
+}
+.btn-primary:hover {
+  background-color: rgb(1.762295082, 87.2336065574, 213.237704918);
+  border-color: rgb(1.5532786885, 76.887295082, 187.9467213115);
+}
+.btn-outline-primary {
+  transition: all 0.3s ease-in-out;
+}
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: white;
+  border: 1px solid rgb(1.9713114754, 97.5799180328, 238.5286885246);
+}
+.btn-outline-primary:hover:hover {
+  background-color: rgb(1.762295082, 87.2336065574, 213.237704918);
+  border-color: rgb(1.5532786885, 76.887295082, 187.9467213115);
+}
+
+.form-control {
+  transition: all 0.3s ease-in-out;
+}
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+#todoList .list-group-item {
+  border-left: none;
+  border-right: none;
+}
+#todoList .list-group-item:first-child {
+  border-top: none;
+}
+
+#clearCompleted {
+  transition: all 0.3s ease-in-out;
+}
+#clearCompleted:hover {
+  transform: scale(1.05);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.new-todo {
+  animation: slideIn 0.3s ease-out;
+}
+
+/*# sourceMappingURL=main.css.map */
