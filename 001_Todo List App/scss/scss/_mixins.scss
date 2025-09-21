@@ -1,0 +1,42 @@
+@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%)) {
+  background-color: $background;
+  border-color: $border;
+  
+  &:hover {
+    background-color: $hover-background;
+    border-color: darken($border, 10%);
+  }
+  
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($background, 0.5);
+  }
+}
+
+@mixin todo-item($priority: null) {
+  padding: $spacer;
+  border: 1px solid $todo-border;
+  border-radius: $border-radius;
+  margin-bottom: $spacer * 0.5;
+  background: white;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: $todo-hover;
+    transform: translateY(-1px);
+    box-shadow: $box-shadow;
+  }
+  
+  @if $priority == 'high' {
+    border-left: 4px solid $high-priority;
+  } @else if $priority == 'medium' {
+    border-left: 4px solid $medium-priority;
+  } @else if $priority == 'low' {
+    border-left: 4px solid $low-priority;
+  }
+}
+
+@mixin completed-task {
+  text-decoration: line-through;
+  opacity: 0.7;
+  background-color: lighten($success-color, 45%);
+}

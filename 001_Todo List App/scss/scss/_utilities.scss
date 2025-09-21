@@ -1,0 +1,53 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-strikethrough {
+  text-decoration: line-through;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease-out;
+}
+
+@keyframes slideOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.priority-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+  
+  &.high {
+    background-color: $high-priority;
+  }
+  
+  &.medium {
+    background-color: $medium-priority;
+  }
+  
+  &.low {
+    background-color: $low-priority;
+  }
+}
