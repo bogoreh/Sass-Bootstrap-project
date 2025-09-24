@@ -1,0 +1,34 @@
+// Import partials (will show deprecation warnings but will work)
+@import 'variables';
+@import 'mixins';
+@import 'components';
+
+// Base styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $dark-color;
+    scroll-behavior: smooth;
+}
+
+// Utility classes
+.section-padding {
+    padding: $section-padding;
+}
+
+.text-gradient {
+    // Use a manually lightened color instead of lighten() function
+    @include gradient-text(linear-gradient(90deg, $primary-color, #8d6bd1));
+}
+
+// Scroll padding for fixed navbar
+html {
+    scroll-padding-top: 76px;
+}

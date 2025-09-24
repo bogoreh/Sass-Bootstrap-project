@@ -1,0 +1,12 @@
+{
+  "name": "002_photo-journal",
+  "version": "1.0.0",
+  "description": "A responsive photo journal with Bootstrap and Sass",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

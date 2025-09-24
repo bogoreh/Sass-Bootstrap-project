@@ -1,0 +1,35 @@
+// Flexbox mixin
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Transition mixin
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+    transition: #{$property} #{$duration} #{$timing};
+}
+
+// Media query mixins
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 576px) { @content; }
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 768px) { @content; }
+    }
+    @if $breakpoint == desktop {
+        @media (max-width: 992px) { @content; }
+    }
+    @if $breakpoint == large {
+        @media (max-width: 1200px) { @content; }
+    }
+}
+
+// Gradient text
+@mixin gradient-text($gradient) {
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
