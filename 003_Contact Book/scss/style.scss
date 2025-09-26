@@ -1,0 +1,95 @@
+// Import Bootstrap functions first (if using Bootstrap SASS)
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/mixins";
+
+// Import custom partials
+@import 'variables';
+@import 'mixins';
+@import 'forms';
+@import 'contact-card';
+@import 'responsive';
+
+// Base styles
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $dark-color;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+// Utility classes
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-0 { margin-top: 0; }
+.mb-0 { margin-bottom: 0; }
+.ml-0 { margin-left: 0; }
+.mr-0 { margin-right: 0; }
+
+// Loading state
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+// Empty state
+.empty-state {
+    text-align: center;
+    padding: $spacer * 4;
+    color: $secondary-color;
+    
+    i {
+        font-size: 4rem;
+        margin-bottom: $spacer;
+        opacity: 0.5;
+    }
+    
+    h3 {
+        margin-bottom: $spacer;
+    }
+}
+
+// Animation classes
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,75 @@
+// Header styles
+.contact-header {
+    text-align: center;
+    padding: $spacer * 3 0;
+    background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+    color: white;
+    margin-bottom: $spacer * 3;
+    border-radius: 0 0 $border-radius $border-radius;
+    
+    h1 {
+        font-weight: 700;
+        margin-bottom: $spacer;
+    }
+    
+    .lead {
+        opacity: 0.9;
+        font-size: 1.1rem;
+    }
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: $dark-color;
+    margin-bottom: $spacer * 2;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 3rem;
+        height: 3px;
+        background: $primary-color;
+        border-radius: 2px;
+    }
+}
+
+// Responsive adjustments
+@include respond-to(sm) {
+    .contact-header {
+        padding: $spacer * 4 0;
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@include respond-to(md) {
+    .container-fluid {
+        padding: 0 $spacer * 2;
+    }
+    
+    .contact-form-section {
+        .row {
+            margin: 0 -0.75rem;
+        }
+    }
+}
+
+// Print styles
+@media print {
+    .contact-form-section,
+    .search-section {
+        display: none;
+    }
+    
+    .contact-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid $secondary-color;
+    }
+}

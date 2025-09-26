@@ -1,0 +1,93 @@
+.contact-card {
+    @include card-style;
+    margin-bottom: $spacer * 1.5;
+    border-left: 4px solid $primary-color;
+    
+    .contact-header {
+        @include flex-between;
+        margin-bottom: $spacer;
+        
+        .contact-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: $dark-color;
+            margin: 0;
+        }
+        
+        .contact-category {
+            font-size: 0.875rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-weight: 500;
+            
+            @each $category, $color in $category-colors {
+                &.#{$category} {
+                    background-color: rgba($color, 0.1);
+                    color: $color;
+                    border: 1px solid rgba($color, 0.2);
+                }
+            }
+        }
+    }
+    
+    .contact-details {
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            
+            i {
+                width: 1.5rem;
+                color: $secondary-color;
+                margin-right: 0.5rem;
+            }
+            
+            a {
+                color: $secondary-color;
+                text-decoration: none;
+                
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    
+    .contact-actions {
+        @include flex-between;
+        margin-top: $spacer;
+        padding-top: $spacer;
+        border-top: 1px solid rgba($secondary-color, 0.1);
+        
+        .btn {
+            font-size: 0.875rem;
+            padding: 0.375rem 0.75rem;
+        }
+    }
+    
+    // Responsive adjustments
+    @include respond-to(md) {
+        .contact-header {
+            flex-direction: column;
+            align-items: flex-start;
+            
+            .contact-category {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: $spacer * 1.5;
+    
+    @include respond-to(lg) {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+    
+    @include respond-to(xl) {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+}

@@ -1,0 +1,58 @@
+.contact-form-section {
+    margin-bottom: $spacer * 3;
+    
+    .form-card {
+        @include card-style;
+        border-left: 4px solid $success-color;
+    }
+    
+    .contact-form {
+        .form-label {
+            font-weight: 600;
+            color: $dark-color;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-control, .form-select {
+            border: 1px solid rgba($secondary-color, 0.3);
+            border-radius: $border-radius;
+            padding: 0.75rem;
+            transition: all 0.3s ease;
+            
+            &:focus {
+                border-color: $primary-color;
+                box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.1);
+            }
+        }
+        
+        .btn-add-contact {
+            @include button-variant($success-color);
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: $border-radius;
+        }
+    }
+}
+
+.search-section {
+    margin-bottom: $spacer * 2;
+    
+    .input-group {
+        .form-control {
+            border-right: 0;
+        }
+        
+        .btn {
+            border-left: 0;
+            background: white;
+            
+            &:hover {
+                background: $light-color;
+            }
+        }
+    }
+    
+    .form-select {
+        border-radius: $border-radius;
+    }
+}
