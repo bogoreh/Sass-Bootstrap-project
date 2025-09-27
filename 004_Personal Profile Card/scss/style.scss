@@ -1,0 +1,157 @@
+// Import Variables
+@import 'variables';
+
+// Base Styles
+body {
+    background-color: $background-color;
+    font-family: $font-family-primary;
+    color: $text-color;
+}
+
+// Profile Card Styles
+.profile-card {
+    .card {
+        border: none;
+        border-radius: $card-border-radius;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+    
+    .profile-image-container {
+        position: relative;
+        overflow: hidden;
+        
+        .profile-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(transparent, rgba($secondary-color, 0.7));
+        }
+    }
+    
+    .card-body {
+        padding: 2rem;
+        
+        .profile-name {
+            color: $secondary-color;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-title {
+            color: $primary-color;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .profile-bio {
+            color: $light-text;
+            line-height: 1.6;
+        }
+    }
+    
+    // Social Links
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+        
+        .btn-social {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+            
+            &.btn-twitter {
+                background-color: $twitter-color;
+                
+                &:hover {
+                    background-color: darken($twitter-color, 10%);
+                }
+            }
+            
+            &.btn-linkedin {
+                background-color: $linkedin-color;
+                
+                &:hover {
+                    background-color: darken($linkedin-color, 10%);
+                }
+            }
+            
+            &.btn-github {
+                background-color: $github-color;
+                
+                &:hover {
+                    background-color: darken($github-color, 10%);
+                }
+            }
+            
+            &.btn-instagram {
+                background-color: $instagram-color;
+                
+                &:hover {
+                    background-color: darken($instagram-color, 10%);
+                }
+            }
+        }
+    }
+    
+    // Contact Button
+    .btn-contact {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        padding: 0.7rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background-color: darken($primary-color, 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba($primary-color, 0.3);
+        }
+    }
+}
+
+// Responsive Adjustments
+@media (max-width: 768px) {
+    .profile-card {
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .profile-image-container .profile-image {
+            height: 200px;
+        }
+    }
+}
