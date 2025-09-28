@@ -1,0 +1,44 @@
+// Import variables and components
+@import 'variables';
+@import 'components';
+
+// Global Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-primary;
+    line-height: 1.6;
+    color: $text-color;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// Utility Classes
+.text-gradient {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// Bootstrap Overrides
+.btn-primary {
+    background: linear-gradient(135deg, $primary-color, $secondary-color);
+    border: none;
+    
+    &:hover {
+        background: linear-gradient(135deg, darken($primary-color, 10%), darken($secondary-color, 10%));
+    }
+}
+
+// Section spacing
+section {
+    position: relative;
+}
