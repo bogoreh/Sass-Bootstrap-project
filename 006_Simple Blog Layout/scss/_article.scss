@@ -1,0 +1,54 @@
+.blog-post {
+    margin-bottom: 2rem;
+    
+    .blog-card {
+        border: none;
+        border-radius: $border-radius;
+        overflow: hidden;
+        @include box-shadow(1);
+        @include transition(transform);
+        
+        &:hover {
+            transform: translateY(-5px);
+            @include box-shadow(3);
+        }
+        
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            @include transition(transform);
+        }
+        
+        &:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            color: $primary-color;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .card-text {
+            color: lighten($text-color, 20%);
+            line-height: $line-height-base;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            background-color: $secondary-color;
+            border: none;
+            border-radius: 25px;
+            padding: 0.5rem 1.5rem;
+            @include transition(background-color);
+            
+            &:hover {
+                background-color: darken($secondary-color, 10%);
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'article';
+@import 'sidebar';
+@import 'footer';
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $text-color;
+    background-color: $light-bg;
+}
+
+.container {
+    @include respond-to('lg') {
+        max-width: 1140px;
+    }
+}
+
+.text-primary-custom {
+    color: $primary-color;
+}
+
+.bg-light-custom {
+    background-color: $light-bg;
+}

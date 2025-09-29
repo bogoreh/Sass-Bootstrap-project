@@ -1,0 +1,146 @@
+.blog-header {
+  background: linear-gradient(135deg, #2c3e50, rgb(25.9032258065, 36.5, 47.0967741935));
+}
+.blog-header .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white !important;
+}
+.blog-header .navbar-brand:hover {
+  color: rgb(138.6359832636, 195.9581589958, 234.3640167364) !important;
+}
+.blog-header .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease-in-out;
+}
+.blog-header .nav-link:hover {
+  color: #3498db !important;
+}
+
+.blog-post {
+  margin-bottom: 2rem;
+}
+.blog-post .blog-card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.blog-post .blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.blog-post .blog-card .card-img-top {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.blog-post .blog-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+.blog-post .blog-card .card-body {
+  padding: 1.5rem;
+}
+.blog-post .blog-card .card-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.blog-post .blog-card .card-text {
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.blog-post .blog-card .btn {
+  background-color: #3498db;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s ease-in-out;
+}
+.blog-post .blog-card .btn:hover {
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+}
+
+.sidebar .sidebar-widget {
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.sidebar .sidebar-widget .card-body {
+  padding: 1.5rem;
+}
+.sidebar .sidebar-widget .card-title {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+.sidebar .sidebar-widget ul li {
+  margin-bottom: 0.5rem;
+}
+.sidebar .sidebar-widget ul li a {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.sidebar .sidebar-widget ul li a:hover {
+  color: #3498db;
+}
+.sidebar .sidebar-widget .form-control {
+  border-radius: 25px;
+  border: 1px solid #ddd;
+}
+.sidebar .sidebar-widget .form-control:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.blog-footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+.blog-footer p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+.blog-footer .footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+.blog-footer .footer-link:hover {
+  color: #3498db;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.text-primary-custom {
+  color: #2c3e50;
+}
+
+.bg-light-custom {
+  background-color: #f8f9fa;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,46 @@
+.sidebar {
+    .sidebar-widget {
+        border: none;
+        border-radius: $border-radius;
+        margin-bottom: 1.5rem;
+        @include box-shadow(1);
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            color: $primary-color;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid $secondary-color;
+            padding-bottom: 0.5rem;
+        }
+        
+        ul {
+            li {
+                margin-bottom: 0.5rem;
+                
+                a {
+                    color: lighten($text-color, 20%);
+                    text-decoration: none;
+                    @include transition(color);
+                    
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+        
+        .form-control {
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            
+            &:focus {
+                border-color: $secondary-color;
+                box-shadow: 0 0 0 0.2rem rgba($secondary-color, 0.25);
+            }
+        }
+    }
+}

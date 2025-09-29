@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="blog-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">SimpleBlog</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Blog Posts -->
+            <div class="col-lg-8">
+                <article class="blog-post">
+                    <div class="card blog-card">
+                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Blog Post Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Getting Started with SASS</h2>
+                            <p class="card-text">Learn how to use SASS to create maintainable and scalable CSS for your projects.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <div class="card blog-card">
+                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Blog Post Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Bootstrap Grid System</h2>
+                            <p class="card-text">Master the Bootstrap grid system to create responsive layouts with ease.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-post">
+                    <div class="card blog-card">
+                        <img src="https://placehold.co/600x400" class="card-img-top" alt="Blog Post Image">
+                        <div class="card-body">
+                            <h2 class="card-title">Modern Web Design Trends</h2>
+                            <p class="card-text">Explore the latest trends in web design and how to implement them.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="col-lg-4">
+                <div class="sidebar">
+                    <div class="card sidebar-widget">
+                        <div class="card-body">
+                            <h5 class="card-title">About Me</h5>
+                            <p class="card-text">Welcome to my blog! I write about web development, design, and technology.</p>
+                        </div>
+                    </div>
+
+                    <div class="card sidebar-widget">
+                        <div class="card-body">
+                            <h5 class="card-title">Categories</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">JavaScript</a></li>
+                                <li><a href="#">CSS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card sidebar-widget">
+                        <div class="card-body">
+                            <h5 class="card-title">Subscribe</h5>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Your email">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="blog-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 SimpleBlog. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

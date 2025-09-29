@@ -1,0 +1,24 @@
+.blog-header {
+    background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+    
+    .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: white !important;
+        
+        &:hover {
+            color: lighten($secondary-color, 20%) !important;
+        }
+    }
+    
+    .nav-link {
+        color: rgba(255, 255, 255, 0.9) !important;
+        font-weight: 500;
+        margin: 0 0.5rem;
+        @include transition(color);
+        
+        &:hover {
+            color: $secondary-color !important;
+        }
+    }
+}
