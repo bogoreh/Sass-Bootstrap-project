@@ -1,0 +1,63 @@
+// Import Bootstrap
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// Import Custom Variables
+@import "variables";
+
+// Override Bootstrap Variables
+$primary: $primary;
+$secondary: $secondary;
+$success: $success;
+$info: $info;
+$warning: $warning;
+$light: $light;
+$dark: $dark;
+
+$spacer: $spacer;
+$spacers: $spacers;
+$border-radius: $border-radius;
+$border-radius-lg: $border-radius-lg;
+$box-shadow: $box-shadow;
+$box-shadow-lg: $box-shadow-lg;
+
+// Import Bootstrap Components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/utilities";
+
+// Import Custom Styles
+@import "animations";
+@import "pricing-table";
+
+// Global Styles
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: $dark;
+}
+
+// Utility Classes
+.gradient-text {
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-custom {
+  box-shadow: $box-shadow-lg !important;
+}
+
+// Loading State
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
