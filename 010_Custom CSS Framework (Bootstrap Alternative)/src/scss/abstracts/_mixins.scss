@@ -1,0 +1,47 @@
+// Media queries
+@mixin media-breakpoint-up($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $min: map-get($breakpoints, $breakpoint);
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $max: map-get($breakpoints, $breakpoint) - 0.02px;
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+// Flexbox
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Buttons
+@mixin button-variant($background, $color: white) {
+  background-color: $background;
+  color: $color;
+  border: 1px solid $background;
+  
+  &:hover {
+    background-color: darken($background, 10%);
+    border-color: darken($background, 10%);
+  }
+  
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba($background, 0.25);
+  }
+}

@@ -1,0 +1,33 @@
+.form-group {
+    margin-bottom: $spacer;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $dark;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: $border-radius;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    
+    &:focus {
+        border-color: $primary;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+    }
+    
+    &::placeholder {
+        color: #6c757d;
+        opacity: 1;
+    }
+}

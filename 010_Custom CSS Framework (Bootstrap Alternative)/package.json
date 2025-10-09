@@ -1,0 +1,24 @@
+{
+  "name": "007_custom-css-framework-(bootstrap-alternative)",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.93.2"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0"
+  }
+}

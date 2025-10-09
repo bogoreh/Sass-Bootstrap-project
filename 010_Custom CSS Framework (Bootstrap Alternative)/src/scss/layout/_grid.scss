@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  padding-right: $grid-gutter-width * 0.5;
+  padding-left: $grid-gutter-width * 0.5;
+  margin-right: auto;
+  margin-left: auto;
+  
+  @each $breakpoint, $width in $container-max-widths {
+    @include media-breakpoint-up($breakpoint) {
+      max-width: $width;
+    }
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: $grid-gutter-width * 0.5;
+  padding-left: $grid-gutter-width * 0.5;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$grid-gutter-width * 0.5;
+  margin-left: -$grid-gutter-width * 0.5;
+}
+
+.col {
+  flex: 1 0 0%;
+  padding: 0 $grid-gutter-width * 0.5;
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: percentage($i / $grid-columns);
+    padding: 0 $grid-gutter-width * 0.5;
+  }
+}
+
+// Responsive grid
+@each $breakpoint, $width in $breakpoints {
+  @if $breakpoint != xs {
+    @include media-breakpoint-up($breakpoint) {
+      @for $i from 1 through $grid-columns {
+        .col-#{$breakpoint}-#{$i} {
+          flex: 0 0 auto;
+          width: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }
+}
