@@ -1,0 +1,18 @@
+// Color variables for dark mode
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --card-bg: #1e1e1e;
+    --section-bg: #1a1a1a;
+    --footer-bg: #0d0d0d;
+    --border-color: #333333;
+    --hover-color: rgba(255, 255, 255, 0.05);
+    --skill-bar-bg: #333333;
+    --tag-bg: #333333;
+    --gradient-start: #1a1a1a;
+    --gradient-end: #121212;
+    
+    // RGB values for backdrop filter
+    --bg-color-rgb: 18, 18, 18;
+}

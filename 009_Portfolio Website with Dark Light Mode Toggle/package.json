@@ -1,0 +1,22 @@
+{
+  "name": "006_portfolio-website-with-dark-light-mode-toggle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.93.2"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "gsap": "^3.13.0"
+  }
+}

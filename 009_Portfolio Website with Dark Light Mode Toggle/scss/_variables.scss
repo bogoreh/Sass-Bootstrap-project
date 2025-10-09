@@ -1,0 +1,18 @@
+// Color variables for light mode
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --text-secondary: #666666;
+    --card-bg: #f8f9fa;
+    --section-bg: #f5f5f5;
+    --footer-bg: #e9ecef;
+    --border-color: #dee2e6;
+    --hover-color: rgba(0, 0, 0, 0.05);
+    --skill-bar-bg: #e9ecef;
+    --tag-bg: #e9ecef;
+    --gradient-start: #f8f9fa;
+    --gradient-end: #e9ecef;
+    
+    // RGB values for backdrop filter
+    --bg-color-rgb: 255, 255, 255;
+}
