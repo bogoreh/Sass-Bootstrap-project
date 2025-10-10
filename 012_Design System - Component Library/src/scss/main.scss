@@ -1,0 +1,31 @@
+// Import Bootstrap (if using)
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Import abstract
+@import 'abstract/variables';
+@import 'abstract/mixins';
+
+// Import base
+@import 'base/reset';
+@import 'base/typography';
+
+// Import components
+@import 'components/buttons';
+@import 'components/cards';
+
+// Import layout
+@import 'layout/header';
+@import 'layout/grid';
+
+// Main styles
+body {
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  color: $text-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
