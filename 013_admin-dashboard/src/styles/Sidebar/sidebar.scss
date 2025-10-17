@@ -1,0 +1,71 @@
+@import "../variables/variables";
+
+.sidebar_container {
+  background-color: white;
+  height: 100vh;
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+
+  .sidebar_header {
+    margin-top: 5px;
+
+    .sidebar_logo {
+      text-align: center;
+
+      p {
+        font-weight: 700;
+        font-size: x-large;
+      }
+    }
+
+    .sidebar_icon {
+      background-color: #fce1bc;
+      padding: 5px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .sidebar_footer {
+    margin-bottom: 15px;
+
+    .login_icon {
+      background-color: #f7f6ff;
+      padding: 5px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .sidebar_body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #f7f6ff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 6px;
+    border-radius: 20px;
+    color: $icon_color;
+    cursor: pointer;
+
+    .sidebar_body_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      border-radius: 100%;
+      &:hover {
+        background-color: $purple_blue;
+        color: whitesmoke;
+      }
+    }
+  }
+}

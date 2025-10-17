@@ -1,0 +1,17 @@
+$purple_blue: #515de6;
+$orange_bg: #fea90e;
+$icon_color: #a6a5ad;
+
+@mixin ButtonStyle($background, $color) {
+  background-color: $background;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: $color;
+  font-weight: 600;
+  cursor: pointer;
+}

@@ -1,0 +1,563 @@
+@import "../variables/variables";
+
+.body-container {
+  width: 100%;
+  padding-left: 6.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .bodyleft {
+    width: 75%;
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .body_header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .user_name {
+        .header {
+          font-weight: 600;
+          margin-bottom: -2%;
+          font-size: x-large;
+        }
+        .description {
+          font-weight: 400;
+          color: $icon_color;
+        }
+      }
+
+      .search_icon {
+        padding-right: 2%;
+        display: flex;
+        align-items: center;
+
+        div {
+          background-color: white;
+          padding: 5px;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .leftbody {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .row-one {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+  }
+  .bodyright {
+    width: 25%;
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@mixin card($width) {
+  background-color: white;
+  width: $width;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.first_card {
+  @include card(50%);
+  .card_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    p {
+      font-weight: 500;
+    }
+
+    button {
+      @include ButtonStyle(#f7f7f8, black);
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      display: flex;
+      flex-direction: row;
+
+      p {
+        font-weight: 800;
+      }
+    }
+  }
+  .first_cardbody {
+    display: flex;
+    flex-direction: row;
+
+    .first_left {
+      div {
+        display: flex;
+        flex-direction: column;
+
+        .cash {
+          font-weight: 600;
+          font-size: larger;
+        }
+        .line-chart {
+          display: flex;
+          flex-direction: column;
+          height: 2%;
+
+          img {
+            width: 50%;
+            height: 5vh;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+
+          p {
+            font-weight: 300;
+            color: $icon_color;
+            font-size: small;
+          }
+        }
+
+        .coin {
+          display: flex;
+          flex-direction: row;
+
+          img {
+            width: 25%;
+            height: 25%;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+
+          p {
+            font-weight: 300;
+            color: $icon_color;
+            font-size: small;
+          }
+        }
+      }
+    }
+    .first_right {
+      img {
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  }
+}
+
+.second_card {
+  @include card(45%);
+  .card_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      font-weight: 500;
+    }
+  }
+  .card_body {
+    display: flex;
+    flex-direction: column;
+
+    .time_container {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      .time_div {
+        p {
+          margin: 0;
+        }
+        .time {
+          font-weight: 600;
+        }
+        .det {
+          color: $icon_color;
+          font-weight: 500;
+          font-size: small;
+        }
+      }
+    }
+    .checkbox_container {
+      display: flex;
+      flex-direction: column;
+
+      .checkbox_header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .checkbox_header-1 {
+          display: flex;
+          flex-direction: row;
+          gap: 0.2rem;
+
+          .icon {
+            color: $icon_color;
+          }
+
+          p {
+            font-weight: 600;
+          }
+        }
+      }
+      .checkbox_body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 0.5rem;
+
+        .checkbox_c {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          background-color: #f7f7f8;
+          padding-left: 5px;
+          padding-right: 5px;
+          border-radius: 10px;
+
+          p {
+            font-weight: 500;
+          }
+
+          div {
+            display: flex;
+            flex-direction: row;
+            gap: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.third_card {
+  @include card(45%);
+  gap: 1rem;
+  .card_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      font-weight: 500;
+    }
+  }
+  .chat_box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .user1 {
+      display: flex;
+      justify-content: end;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+
+        .chat {
+          margin-top: auto;
+          margin-bottom: auto;
+          background-color: $purple_blue;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          color: white;
+          font-weight: 600;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .user2 {
+      display: flex;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+
+        .chat {
+          margin-top: auto;
+          margin-bottom: auto;
+          background-color: #f7f5fe;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          color: black;
+          font-weight: 600;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  .text_area {
+    .text_area_container {
+      background-color: #f7f6fb;
+
+      textarea {
+        background-color: inherit;
+        outline: none;
+        width: 98.5%;
+        border: none;
+      }
+
+      div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .text_area_icon {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding-left: 10px;
+      }
+
+      button {
+        @include ButtonStyle($purple_blue, white);
+
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.fourth_card {
+  @include card(45%);
+  gap: 1rem;
+
+  .hr-style {
+    display: block;
+    height: 1px;
+    background-color: #333;
+    border: none;
+    margin: 10px 0;
+  }
+
+  .card_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      font-weight: 500;
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      color: $icon_color;
+      cursor: pointer;
+    }
+  }
+  .user_list {
+    display: flex;
+    flex-direction: column;
+
+    .single_user {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .single_left {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        div {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+
+        .user__name {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          p {
+            margin: 0;
+          }
+          .name {
+            font-weight: 500;
+          }
+          .date {
+            color: $icon_color;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .single_right {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        p {
+          margin-top: auto;
+          margin-bottom: auto;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.fifth_card {
+  @include card(100%);
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+
+  .card_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      font-weight: 500;
+    }
+  }
+
+  .card_body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .number {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: -0.5rem;
+
+    p {
+      margin: 0;
+    }
+
+    .blur {
+      color: $icon_color;
+    }
+  }
+
+  .card_bar {
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, $purple_blue 75%, $orange_bg 75%);
+    border-radius: 5px;
+  }
+}
+
+.sixth_card {
+  @include card(100%);
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+
+  .card_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      font-weight: 500;
+    }
+  }
+  .user_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .single_user {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .single_left {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        div {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+
+        .user__name {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          p {
+            margin: 0;
+          }
+          .name {
+            font-weight: 500;
+          }
+          .date {
+            color: $icon_color;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .single_right {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        p {
+          margin-top: auto;
+          margin-bottom: auto;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+.seventh_card {
+  @include card(100%);
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+
+  .card_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+      font-weight: 500;
+    }
+  }
+}
